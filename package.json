@@ -4,16 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node index.ts",
-    "server":"ts-node ./server/index.ts"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next"
   },
   "author": "Juan Murguia",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",
+    "next": "^15.1.5",
     "pg": "^8.13.0",
     "pg-hstore": "^2.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "sequelize": "^6.37.4"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.7",
+    "typescript": "5.7.3"
   }
 }
