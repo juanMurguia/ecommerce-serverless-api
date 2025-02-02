@@ -1,26 +1,54 @@
 {
-  "name": "sequalize",
+  "name": "serverless-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next"
+    "start": "next",
+    "test": "ava"
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "environmentVariables": {
+      "TESTING": "true",
+      "JWT_SECRET": "91289182391832"
+    },
+    "nodeArguments": [
+      "--import=tsimp"
+    ]
   },
   "author": "Juan Murguia",
   "license": "ISC",
   "dependencies": {
+    "airtable": "^0.12.2",
+    "algoliasearch": "^5.19.0",
+    "ava": "^6.2.0",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "esbuild-node-loader": "^0.8.0",
     "express": "^4.21.1",
+    "firebase-admin": "^13.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "mercadopago": "^2.3.0",
+    "micro-method-router": "^0.1.0",
     "next": "^15.1.5",
+    "parse-bearer-token": "^1.0.1",
     "pg": "^8.13.0",
     "pg-hstore": "^2.3.4",
+    "random-seed": "^0.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sequelize": "^6.37.4"
+    "sequelize": "^6.37.4",
+    "tsimp": "^2.0.12",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@types/react": "19.0.7",
+    "tsx": "^4.19.2",
     "typescript": "5.7.3"
   }
 }
